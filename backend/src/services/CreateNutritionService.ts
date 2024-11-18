@@ -14,7 +14,7 @@ class CreateNutritionService {
     try {
       const apiKey = process.env.API_KEY!;
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // gemini-1.5-flash or gemini-1.5-pro
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" }); // gemini-1.5-flash or gemini-1.5-pro
 
       const response = await model.generateContent(
         `Crie uma dieta completa para uma pessoa com nome: ${name}, ${age} anos, ${height}cm, ${weight}kg, 
